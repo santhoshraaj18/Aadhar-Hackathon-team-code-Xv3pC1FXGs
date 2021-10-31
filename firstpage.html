@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf.g">
+    <title> Home- Unique Identification Authority Of India </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="login-box">
+        <h1><center> Login </center></h1>
+        <div class="textbox">
+            <i class="fas fa-fingerprint"></i>
+            <input type="text" placeholder="Aadhaar ID" name="" value="">
+        </div>
+        <div class="textbox">
+            <i class="fas fa-phone-alt"></i>
+            <input type="text" placeholder="Phone Number" name="" value="">
+        </div>
+        <a href=" file:///C:/Users/asark/OneDrive/Desktop/css/HTMLPage1.html">
+        <input class="btn" type="button" name="" value="Submit" onclick="myFun()">
+            </a>
+    </div>
+    <script>function myFun(){
+    var otp = prompt("ENTER THE OTP:");
+    if(otp == '') {
+      swal({
+        title: "Field is Empty!!!",
+        text: "Please check again",
+        type: "Password",
+        icon: "warning",
+        button: "OK",
+      });
+    }
+  }</script>
+</body>
+</html>

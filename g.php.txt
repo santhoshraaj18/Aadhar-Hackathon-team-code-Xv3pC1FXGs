@@ -1,0 +1,27 @@
+<?php
+$firstname= $_POST['firstname'];
+$middlename = $_POST['middlename'];
+$lastname= $_POST['lastname'];
+$gender = $_POST['gender'];
+$adhaar = $_POST['adhaar'];
+$state= $_POST['state'];
+$cityname = $_POST['cityname'];
+$pincode = $_POST['pincode'];
+
+$conn = new mysqli('localhost','root','SAaz07300824@','triall');
+if($conn->connect_error)
+{
+    die("Connection Failed :'.$conn->connect_error);
+}
+else
+{
+    $stmt =$conn->prepare("insert into trail(firstname,middlename,lastname,gender,adhaar,state,cityname,pincode))
+    values(?,?,?,?,?,?,?,?)");
+    $stmt->bind_param("sssssssi,$firstname,$middlename,$lastname,$gender,$adhaar,$state,$cityname,$pincode);
+     $stmt->execute();
+     echo"Complete";
+      $stmt->close();
+     $conn->close();
+}
+
+?>
